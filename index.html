@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'> 
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: url(таня/Media/WhatsApp_Images/IMG-20191022-WA0023.jpg) top no-repeat;
+    background-size: 70%;
+    transition: background-size,background-position 1s,2s;
+    animation: puls 1s infinite;
+}
+#a, #b{
+    width: 90%;
+    height: 90%;
+    margin: 2.5% 5%;
+    position: absolute;    
+}
+#a{
+    transition-property: background-position,background-image,transform;
+    transition-duration:  2s,1s,1s;
+    background: no-repeat center rgba(0, 0, 0, .6);
+    box-shadow: 0 0 50px #000;
+    background-size: 30%;
+    perspective: 9999px;
+}
+#b{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0);
+    font-size: 450%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: color,text-shadow 15s,8s;
+}
+@media screen and (max-width: 999px){
+    body{
+        background-image: url(https://ibb.co/Lgh69Jg);
+        background-color: rgba(0, 0, 0, .6);
+        background-size: 80%;
+        animation: none;
+    }
+}
+@media screen and (orientation: portrait){
+    body{
+        background-size: 40%;
+        background-repeat: repeat;
+        animation: puls 1s infinite;
+    }
+}
+@keyframes puls {
+    from{
+        background-size: 68%;
+    }
+    to{
+        background-size: 75%;
+    }
+}
+@keyframes puls1 {
+    from{
+        background-size: 39%;
+    }
+    to{
+        background-size: 45%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="a">
+        
+    </div>
+    <div id="b">
+        <p>спасибо </p>
+        <p>что</p>
+        <p>ты</p>
+        <p>есть</p>
+    </div>
+ <script>
+   let n,f,w;
+
+function getRandonInt(min,max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function position(){
+n=getRandonInt(0,5);
+
+if (n === 1) a.setAttribute('style','background-position: top;');
+else if (n === 2) a.setAttribute('style','background-position: left;');
+else if (n === 3) a.setAttribute('style','background-position: bottom;');
+else if (n === 4) a.setAttribute('style','background-position: right;');
+else if (n === 5) a.setAttribute('style','background-position: center;');
+}
+function photo(){
+    f=getRandonInt(0,11);
+if (f === 0) a.setAttribute('style','background-image:url(https://ibb.co/F57qYyb);');
+else if (f === 1) a.setAttribute('style','background-image:url(https://ibb.co/qsQC2Vd);');
+else if (f === 2) a.setAttribute('style','background-image:url(https://ibb.co/m4j3y1v);');
+else if (f === 3) a.setAttribute('style','background-image:url(https://ibb.co/PGxs87C);');
+else if (f === 4) a.setAttribute('style','background-image:url(https://ibb.co/Ln505XF);');
+else if (f === 5) a.setAttribute('style','background-image:url(https://ibb.co/5sVXbgB);');
+else if (f === 6) a.setAttribute('style','background-image:url(https://ibb.co/4JnJkqn);');
+else if (f === 7) a.setAttribute('style','background-image:url(https://ibb.co/mT9KY7D);');
+else if (f === 8) a.setAttribute('style','background-image:url(https://ibb.co/V9q0nfX);');
+else if (f === 9) a.setAttribute('style','background-image:url(https://ibb.co/4JnJkqn);');
+else if (f === 10) a.setAttribute('style','background-image:url(https://ibb.co/tsmsByz);');
+else if (f === 11) a.setAttribute('style','background-image:urlhttps://ibb.co/Gx95rXf);');
+}
+function rotate(){
+    w=getRandonInt(0,3600);
+if (w % 2 === 0){
+a.setAttribute('style', 'transform:rotateY(-'+ w +'deg);');
+b.setAttribute('style','color: silver;text-shadow: -'+w/360+'px -'+w/360+'px '+w/360+'px gold;');
+}
+else if (w % 2 === 1){
+    a.setAttribute('style', 'transform:rotateX('+ w +'deg);');
+    b.setAttribute('style','color: gold;text-shadow:'+w/360+'px '+w/360+'px '+w/360+'px silver;');
+}
+}
+setInterval(position, 2000);
+setInterval(photo, 2500);
+setInterval(rotate, 3000);
+</script> 
+</body>
+</html>
