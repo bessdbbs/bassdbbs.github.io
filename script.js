@@ -15,19 +15,19 @@ else if (n === 5) a.setAttribute('style','background-position: center;');
 }
 function photo(){
     f=getRandonInt(0,12);
-if (f === 0) a.setAttribute('style','background-image:url(таня/5A55933D4B218F27307D234E9ECE68FD.800.JPG);');
-else if (f === 1) a.setAttribute('style','background-image:url(таня/0BD2870A7B0FAF3EB5594888268D2BCF.800.jpg);');
-else if (f === 2) a.setAttribute('style','background-image:url(таня/Camera/IMG_20191013_121159.jpg);');
-else if (f === 3) a.setAttribute('style','background-image:url(таня/pictures/20191003_180657.jpg);');
-else if (f === 4) a.setAttribute('style','background-image:url(таня/Media/WhatsApp_Images/IMG-20191022-WA0058.jpg);');
-else if (f === 5) a.setAttribute('style','background-image:url(таня/Media/WhatsApp_Images/IMG_20191024_190654.jpg);');
-else if (f === 6) a.setAttribute('style','background-image:url(таня/pictures/PhotoLab/44a9e4f0-283c-454f-bd01-01b28a3a451c.jpg);');
-else if (f === 7) a.setAttribute('style','background-image:url(таня/pictures/2359dd72-6af6-4e57-892f-5be9a8c250b1.jpg);');
-else if (f === 8) a.setAttribute('style','background-image:url(таня/pictures/dd786f0b-f642-4ecd-bb19-3c508ef0b01f.jpg);');
-else if (f === 9) a.setAttribute('style','background-image:url(таня/pictures/Odnoklassniki/IMG_20190306_215740.jpg);');
-else if (f === 10) a.setAttribute('style','background-image:url(таня/pictures/Odnoklassniki/IMG_20190126_204016.jpg);');
-else if (f === 11) a.setAttribute('style','background-image:url(таня/pictures/Odnoklassniki/IMG_20190106_132929.jpg);');
-else if (f === 12) a.setAttribute('style','background-image:url(таня/pictures/RestoredPictures/IMG_20180811_070014.jpg);');
+if (f === 0) a.setAttribute('style','background-image:url(5A55933D4B218F27307D234E9ECE68FD.800.JPG);');
+else if (f === 1) a.setAttribute('style','background-image:url0BD2870A7B0FAF3EB5594888268D2BCF.800.jpg);');
+else if (f === 2) a.setAttribute('style','background-image:url(IMG_20191013_121159.jpg);');
+else if (f === 3) a.setAttribute('style','background-image:url(20191003_180657.jpg);');
+else if (f === 4) a.setAttribute('style','background-image:url(IMG-20191022-WA0058.jpg);');
+else if (f === 5) a.setAttribute('style','background-image:url(IMG_20191024_190654.jpg);');
+else if (f === 6) a.setAttribute('style','background-image:url(44a9e4f0-283c-454f-bd01-01b28a3a451c.jpg);');
+else if (f === 7) a.setAttribute('style','background-image:url(2359dd72-6af6-4e57-892f-5be9a8c250b1.jpg);');
+else if (f === 8) a.setAttribute('style','background-image:url(dd786f0b-f642-4ecd-bb19-3c508ef0b01f.jpg);');
+else if (f === 9) a.setAttribute('style','background-image:url(IMG_20190306_215740.jpg);');
+else if (f === 10) a.setAttribute('style','background-image:url(IMG_20190126_204016.jpg);');
+else if (f === 11) a.setAttribute('style','background-image:url(IMG_20190106_132929.jpg);');
+else if (f === 12) a.setAttribute('style','background-image:url(IMG_20180811_070014.jpg);');
 }
 function rotate(){
     w=getRandonInt(0,3600);
