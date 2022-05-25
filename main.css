@@ -52,7 +52,7 @@ body{
 }
 @media screen and (max-width: 999px){
     body{
-        background-image: url(таня/Media/WhatsApp_Images/IMG-20191022-WA0023.jpg);
+        background-image: url(IMG-20191022-WA0023.jpg);
         background-color: rgba(0, 0, 0, .6);
         background-size: 80%;
         animation: none;
