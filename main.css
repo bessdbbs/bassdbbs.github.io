@@ -58,12 +58,18 @@ body{
         background-size: 80%;
         animation: none;
     }
+    #a{
+        background-size: 50%;
+    }
 }
 @media screen and (orientation: portrait){
     body{
         background-size: 40%;
         background-repeat: repeat;
         animation: puls 1s infinite;
+    }
+    #a{
+        background-size: 80%;
     }
 }
 @keyframes puls {
