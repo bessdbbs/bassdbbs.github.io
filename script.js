@@ -1,4 +1,4 @@
-let n,f,w,s = 1,c;
+let n,f,w,s = 1,c,div;
 
 function getRandonInt(min,max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -41,7 +41,7 @@ else if (w % 2 === 1){
 }
 }
 function text(){
-    let div = document.createElement('div');
+    div = document.createElement('div');
     div.className = 'alert';
 
     if (s === 1) c = '<p>я рад</p><p>каждому</p><p>мигу</p><p>проведённому</p><p>с тобой</p>';
