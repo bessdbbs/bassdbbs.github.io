@@ -9,6 +9,7 @@ body{
     background-size: 70%;
     transition: background-size,background-position 1s,2s;
     animation: puls 1s infinite;
+    overflow: hidden;
 }
 #a, #b{
     width: 90%;
