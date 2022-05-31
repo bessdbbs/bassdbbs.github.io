@@ -47,7 +47,7 @@ function text(){
     if (s === 1) c = '<p>я рад</p><p>каждому</p><p>мигу</p><p>проведённому</p><p>с тобой</p>';
     else if (s === 2) c = '<p>я</p><p>схожу</p><p>от тебя</p><p>с ума</p>';
     else if (s === 3) c = '<p>я</p><p>незнаю</p><p>как</p><p>без тебя</p><p>жить</p>';
-    else if (s > 3) {s = 0;c = '<p>❤</p>'}
+    else if (s > 3) {s = 0;c = '<p>❤</p>';div.setAttribute('style','color:red;font-size:1800%;');}
     div.innerHTML = c;
     document.body.append(div);
     setTimeout(() => div.remove(), 2000);
