@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <title>Cube</title>
+    <style>
+body{
+    padding-top: 5%;
+    overflow: hidden;
+    background: silver;
+    background: url(D:/photo/ifrAd4pBtEA.jpg) black;
+    background-size: 100%;
+}
+#cubeWrapper{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    perspective: 999999px;
+    transition: background-color,box-shadow 1s,1s;
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    margin: 0 5%;
+    border-radius: 50%;
+}
+#cube, #cube1{
+    width: 75px;
+    height: 75px;
+    transform-origin: 50% 50% 37.5px;
+    transform-style: preserve-3d;
+    transition: transform 1s linear;
+}
+.side{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 5em;
+    text-align: center;
+    line-height: 37.5px;
+    transform-origin: 50% 50% 37.5px;
+    backface-visibility: hidden;
+    text-shadow: 0 0 30px red;
+}
+.side0{
+
+}
+.side1{
+    transform: rotateY(90deg);
+}
+.side2{
+    transform: rotateY(-90deg);
+}
+.side3{
+    transform: rotateX(90deg);
+}
+.side4{
+    transform: rotateX(-90deg);
+}
+.side5{
+    transform: rotateY(180deg);
+}
+.text{
+    color: silver;
+    font-size: 3em;
+    font-family: Segoe Print;
+    animation: iden 1s infinite;
+    transition: color 1s;
+}
+@keyframes iden{
+    from{
+    background: linear-gradient(violet, transparent);
+    text-shadow: 0 -500px 20px black;
+    color: rgba(0, 0, 255, .6);
+    box-shadow: 0 800px 0 lime;
+    border: 50px transparent solid;
+    margin: -250px;
+    }
+    to{
+    transform: scale(2);
+    text-shadow: 0 30px 0 silver;
+    color: transparent;
+    box-shadow: 0 30px 50px silver;
+    border-radius: 50%;
+    }
+}
+#plus{
+    display: inline-block;
+    position: absolute;
+    color: aqua;
+}
+.circleWrapper{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: -5%;
+}
+#circle{
+    display: inline-block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    animation: rotateY 30s infinite linear;
+    perspective: 9999px;
+    transform-origin: 50% 50% 0;
+    transform-style: preserve-3d;
+    color: silver;
+    font-family: roboto mono;
+    transition: color .5s;
+}
+.c{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-right: 1px gold solid;
+    border-radius: 50%;
+    box-shadow: 0 0 20px aqua;
+    line-height: 0;
+    transform-origin: 50% 50% 0;
+    backface-visibility: inherit;
+    text-shadow: 0 500px 0 silver;
+    font-size: 2em;
+    transition: color .5s;
+}
+.c:hover{
+    color: aqua;
+    text-shadow: 0 500px 10px aqua;
+}
+.c0{
+    transform: rotateY(15deg);
+}
+.c0:hover{
+    background: url(D:/видео/WEB/20210720201314.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c1{
+    transform: rotateY(30deg);
+}
+.c1:hover{
+    background: url(IMG_20191024_190654.jpg) no-repeat center;
+    background-size: 100%;
+}
+.c2{
+    transform: rotateY(45deg);
+}
+.c2:hover{
+    background: url(D:/видео/WEB/51.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c3{
+    transform: rotateY(60deg);
+}
+.c4:hover{
+    background: url(D:/T/DCIM/DSC00007.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c4{
+    transform: rotateY(75deg);
+}
+.c5:hover{
+    background: url(D:/видео/WEB/20160119210715.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c5{
+    transform: rotateY(90deg);
+}
+.c5:hover{
+    background: url(D:/T/DCIM/DSC00075.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c6{
+    transform: rotateY(105deg);
+}
+.c6:hover{
+    background: url(D:/видео/WEB/20210720201646.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c7{
+    transform: rotateY(120deg);
+}
+.c7:hover{
+    background: url(D:/T/DCIM/DSC00134.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c8{
+    transform: rotateY(135deg);
+}
+.c8:hover{
+    background: url(D:/видео/WEB/20220407153348.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c9{
+    transform: rotateY(150deg);
+}
+.c9:hover{
+    background: url(D:/T/DCIM/DSC00140.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c10{
+    transform: rotateY(165deg);
+}
+.c10:hover{
+    background: url(D:/видео/WEB/20150818133200.JPG) no-repeat center;
+    background-size: 100%;
+}
+.c11{
+    transform: rotateY(180deg);
+}
+.c11:hover{
+    background: url(D:/T/таня/pictures/20191003_180759.jpg) no-repeat center;
+    background-size: 100%;
+}
+@keyframes rotateY{
+    from{
+        transform: rotateY(-360deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="plus"></div>
+ <div id="cubeWrapper">
+ 
+    <div class="text">&#160ТАНЯ&#160</div>
+    <div id="cube">
+        <div class="side side0">❤</div>
+        <div class="side side1">❤</div>
+        <div class="side side2">❤</div>
+        <div class="side side3">❤</div>
+        <div class="side side4">❤</div>
+        <div class="side side5">❤</div>
+    </div>
+    <div class="text">&#160+&#160</div>
+    <div id="cube1">
+        <div class="side side0">❤</div>
+        <div class="side side1">❤</div>
+        <div class="side side2">❤</div>
+        <div class="side side3">❤</div>
+        <div class="side side4">❤</div>
+        <div class="side side5">❤</div>
+    </div>
+    <div class="text">СЕРЁЖА</div>
+ </div>
+ <div class="circleWrapper">
+    <div id="circle">
+        <div class="c c0">U</div>
+        <div class="c c1">O</div>
+        <div class="c c2">Y</div>
+        <div class="c c3"></div>
+        <div class="c c4">E</div>
+        <div class="c c5">V</div>
+        <div class="c c6">O</div>
+        <div class="c c7">L</div>
+        <div class="c c8"></div>
+        <div class="c c9">'</div>
+        <div class="c c10">M</div>
+        <div class="c c11">I</div>
+    </div>
+    </div>
+ <script>
+let x,y,z,a,s;
+
+function engine() {
+
+function getRandonInt(min,max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+x = getRandonInt(0,360);
+y = getRandonInt(0,360);
+z = getRandonInt(0,360);
+a = (getRandonInt(0,100) * .01);
+
+cube.setAttribute('style','transform:rotateX(' + x + 'deg) rotateY(' + y + 'deg) rotateZ(' + z + 'deg) scale(' + (a*3) + ');color: rgba(' + (x*.708) + ', 100, 100, ' + (1-a) + ');');
+cube1.setAttribute('style','transform:rotateX(' + (x-180) + 'deg) rotateY(' + (y-180) + 'deg) rotateZ(' + (z-180) + 'deg) scale(' + (a*3) + ');color: rgba(' + (x*.708) + ', 100, 100, ' + (1-a) + ');');
+cubeWrapper.setAttribute('style', 'background: rgba(' + (x*.708) + ', ' + (y*.708) + ', ' + (z*.708) + ', ' + a +
+ ') center;box-shadow: 0 0 ' + (a*500) + 'px rgb(' + (x*.708) + ', ' + (y*.708) + ', ' + (z*.708) + ');');
+ circle.setAttribute('style', 'color: rgb(' + (z*.708) + ', ' + (z*.708) + ', ' + (z*.708) + ');');
+ if ((a*100) % 3 === 0){
+s = getRandonInt(0,16);
+if ((a*100) % 2 === 0) circle.setAttribute('style', 'color: gold;');
+else  circle.setAttribute('style', 'color: lime;');
+switch (s) {
+    case 0: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/20210720201314.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 1: cubeWrapper.setAttribute('style', 'background: url(IMG_20191024_190654.jpg) no-repeat right;background-size: 50%;');
+        break;
+    case 2: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/51.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 3: cubeWrapper.setAttribute('style', 'background: url(D:/T/DCIM/DSC00007.JPG) no-repeat right;background-size: 50%;');
+        break;
+    case 4: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/20160119210715.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 5: cubeWrapper.setAttribute('style', 'background: url(D:/T/DCIM/DSC00075.JPG) no-repeat right;background-size: 50%;');
+        break;
+    case 6: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/20210720201646.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 7: cubeWrapper.setAttribute('style', 'background: url(D:/T/DCIM/DSC00134.JPG) no-repeat right;background-size: 50%;');
+        break;
+    case 8: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/20220407153348.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 9: cubeWrapper.setAttribute('style', 'background: url(D:/T/DCIM/DSC00140.JPG) no-repeat right;background-size: 50%;');
+        break;
+    case 10: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/20150818133200.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 11: cubeWrapper.setAttribute('style', 'background: url(D:/T/таня/Camera/IMG_20191013_121159.jpg) no-repeat right;background-size: 50%;');
+        break;
+    case 12: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/2015081409200.JPG) no-repeat left;background-size: 50%;');
+        break;
+    case 13: cubeWrapper.setAttribute('style', 'background: url(D:/T/таня/pictures/20191003_180759.jpg) no-repeat right;background-size: 50%;');
+        break;
+    case 14: cubeWrapper.setAttribute('style', 'background: url(D:/видео/WEB/portfolio/IMG_20190408_214709.jpg) no-repeat left;background-size: 50%;');
+        break;
+    case 15: cubeWrapper.setAttribute('style', 'background: url(D:/T/таня/pictures/Odnoklassniki/IMG_20190126_204016.jpg) no-repeat right;background-size: 50%;');
+        break;
+    default:
+        break;
+        }
+    }
+    plus.innerHTML = '<p>s: '+ s +'</p><p>a: '+ a +'</p><p>x: '+ x +'</p><p>y: '+ y +'</p><p>z: '+ z +'</p>';
+}
+setInterval(engine,1000);
+ </script>
+</body>
+</html>
