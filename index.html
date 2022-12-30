@@ -115,6 +115,7 @@ a{
     text-transform: uppercase;
     transition: color,box-shadow,transform,border-radius,text-shadow 2s,1.5s,2s,2.5s,3s;
 }
+
 a:hover{
     color: gold;
     box-shadow: 0 0 50px gold;
@@ -123,6 +124,15 @@ a:hover{
     border-radius: 5%;
     text-shadow: 0 0 10px rgb(119, 0, 255);
 }
+#message{
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    margin: 110% 25%;
+    color: aqua;
+    text-align: center;
+    font-size: 2em;
+    }
 @keyframes rotateY{
     from{
         transform: rotateY(-180deg);
@@ -142,15 +152,24 @@ a:hover{
         box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 40px yellow, 0 0 80px green, 0 0 160px rgb(0, 0, 125), 0 0 320px blue, 0 0 640px violet;
     }
 }
-@media screen and(max-width: 990px) {
+@media screen and (max-width: 990px) {
     a{
-        color: aqua;
+    color: gold;
+    box-shadow: 0 0 50px gold;
+    transform: scale(1.2);
+    background: transparent;
+    border-radius: 5%;
+    text-shadow: 0 0 40px aqua;
+    }
+    #message::after{
+    content: "После оплаты вам откроеться ссылка на курс☟";
     }
 }
 @media screen and (orientation: portrait){
+
     a{
-        width: 50%;
-        margin: 100% 25%;
+    width: 50%;
+    margin: 100% 25%;
     }
 }
     </style>
@@ -172,7 +191,8 @@ a:hover{
         <div class="c c11"></div>
     </div>
     </div>
-    <a href="https://oplata.qiwi.com/form?invoiceUid=1852a83c-2ba8-4bdd-b8c5-402dca457fbb&successUrl=https%3A%2F%2Ftraining.paveldmitriev.com%2Fp%2Fkopiya-gipno-kouchinga-profi" title="После оплаты вам откроеться ссылка на курс">Оплатить</a>
+    <span id="message">☟</span>
+    <a href="https://oplata.qiwi.com/form?invoiceUid=1852a83c-2ba8-4bdd-b8c5-402dca457fbb&successUrl=https%3A%2F%2Ftraining.paveldmitriev.com%2Fp%2Fkopiya-gipno-kouchinga-profi" title="После оплаты вам откроеться ссылка на курс">Оплатить</a><br>
     <script>
         setInterval(() => {
         let div = document.createElement('div');
