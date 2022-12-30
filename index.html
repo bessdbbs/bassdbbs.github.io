@@ -3,13 +3,14 @@
 <head>
     <meta charset='utf-8'>
     <title>👽</title>
-    <link rel="shortcut icon" href="14.png">
+    <link rel="shortcut icon" href="Polish_20221125_101253411.png">
     <style>
 body{
     padding-top: 5%;
     overflow: hidden;
     background: url(https://static.wixstatic.com/media/6adf48_6bc4b13da726408d9996312718cd1688~mv2.gif) navy;
     background-size: 100%;
+    font-family: Roboto mono;
 }
 .circleWrapper{
     position: absolute;
@@ -27,7 +28,7 @@ body{
     position: absolute;
     width: 500px;
     height: 500px;
-    animation: rotateY 1s infinite linear;
+    animation: rotateY 3s infinite linear;
     perspective: 9999px;
     transform-origin: 50% 50% 0;
     transform-style: preserve-3d;
@@ -41,13 +42,16 @@ body{
     display: inline-block;
     width: 100%;
     height: 100%;
-    border: 1px transparent solid;
+    border-top: 1px rgba(180, 100, 150, .2) solid;
+    border-bottom: rgba(220, 19, 12, .05) solid;
+    border-left: rgba(25, 217, 0, .1) solid;
+    border-right: rgba(0, 0, 225, .1) solid;
     border-radius: 50%;
     line-height: 0;
     transform-origin: 50% 50% 0;
     backface-visibility: inherit;
     text-shadow: 0 500px 0 silver;
-    font-size: 2em;
+    font-size: 1.2em;
     cursor: pointer;
     background: transparent;
     transition: transform,background-position,opacity,color 9s,3s,6s,1s,.5s linear;
@@ -88,21 +92,64 @@ body{
 .c11{
     transform: rotateY(180deg);
 }
+.alert{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    height: 50%;
+    color: gold;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+a{
+    font-size: 3em;
+    width: 20%;
+    height: 10%;
+    margin: 22.5% 40%;
+    position: absolute;
+    text-align: center;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+    transition: color,box-shadow,transform,border-radius,text-shadow 2s,1.5s,2s,2.5s,3s;
+}
+a:hover{
+    color: gold;
+    box-shadow: 0 0 50px gold;
+    transform: scale(1.2);
+    background: rgba(0, 0, 225, .5);
+    border-radius: 5%;
+    text-shadow: 0 0 10px rgb(119, 0, 255);
+}
 @keyframes rotateY{
     from{
         transform: rotateY(-180deg);
         background: url(Polish_20221125_101253411.png) no-repeat center rgba(192, 192, 192, .5);
+        background-size: 50%;
         box-shadow: 0 0 800px gold;
     }
     50%{
-        background: url(14.png) no-repeat center;
-        background-size: 50%;
+        background: url(dollar.png) no-repeat center;
+        background-size: 70%;
         box-shadow: 0 0 200px silver, -200px 0 500px black, 200px 0 500px black;
     }
     to{
         transform: rotateY(180deg);
         background: url(Polish_20221125_092442845.png) no-repeat center rgba(255, 217, 0, .5);
+        background-size: 20%;
         box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 40px yellow, 0 0 80px green, 0 0 160px rgb(0, 0, 125), 0 0 320px blue, 0 0 640px violet;
+    }
+}
+@media screen and(max-width: 990px) {
+    a{
+        color: aqua;
+    }
+}
+@media screen and (orientation: portrait){
+    a{
+        float: bottom;
     }
 }
     </style>
@@ -124,5 +171,15 @@ body{
         <div class="c c11"></div>
     </div>
     </div>
+    <a href="">Оплатить</a>
+    <script>
+        setInterval(() => {
+        let div = document.createElement('div');
+        div.className = "alert";
+        div.innerHTML = "<p>внимание</p>" + "200$" + "<p>Курс Платный</p>";
+        document.body.append(div);
+        setTimeout(() => div.remove(), 1000);
+        }, 2000);
+    </script>
 </body>
 </html>
