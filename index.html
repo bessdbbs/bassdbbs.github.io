@@ -101,34 +101,34 @@ body{
     color: gold;
     font-size: 5em;
     text-transform: uppercase;
+    text-decoration: line-through;
 }
 a{
     font-size: 3em;
-    width: 30%;
+    width: 20%;
     height: 10%;
-    margin: 22.5% 35%;
+    margin: 22.5% 40%;
     position: absolute;
     text-align: center;
     background: transparent;
     text-decoration: none;
     border-radius: 50%;
     text-transform: uppercase;
-    transition: color,box-shadow,transform,border-radius,text-shadow 2s,1.5s,2s,2.5s,3s;
+    transition: color,box-shadow,transform,border-radius,text-shadow 1s,1.5s,2s,2.5s,3s;
 }
-
 a:hover{
     color: gold;
     box-shadow: 0 0 50px gold;
     transform: scale(1.2);
-    background: rgba(0, 0, 225, .5);
+    background: rgba(0, 255, 255, .5);
     border-radius: 5%;
-    text-shadow: 0 0 10px rgb(119, 0, 255);
+    text-shadow: 0 0 20px rgb(119, 0, 255);
 }
 #message{
     position: absolute;
     width: 50%;
     height: 20%;
-    margin: 27% 25%;
+    margin: 30% 25%;
     color: aqua;
     text-align: center;
     font-size: 2em;
@@ -165,8 +165,7 @@ a:hover{
     content: "☟После оплаты вам откроеться ссылка на курс☟";
     }
 }
-@media screen and (orientation: portrait){
-
+@media screen and (orientation: portrait) {
     a{
     width: 50%;
     margin: 100% 25%;
@@ -201,14 +200,19 @@ a:hover{
     </div>
     </div>
     <span id="message"></span>
-    <a href="https://oplata.qiwi.com/form?invoiceUid=1852a83c-2ba8-4bdd-b8c5-402dca457fbb&successUrl=https%3A%2F%2Ftraining.paveldmitriev.com%2Fp%2Fkopiya-gipno-kouchinga-profi" title="После оплаты вам откроеться ссылка на курс">Оплатить</a><br>
+    <a href="https://oplata.qiwi.com/form?invoiceUid=b3d35ea4-1dfb-490e-9dd0-4456445334a8&successUrl=https%3A%2F%2Ftraining.paveldmitriev.com%2Fp%2Fkopiya-gipno-kouchinga-profi" title="После оплаты вам откроеться ссылка на курс">Оплатить</a><br>
     <script>
         setInterval(() => {
         let div = document.createElement('div');
         div.className = "alert";
         div.innerHTML = "<p>внимание</p>" + "200$" + "<p>Курс Платный</p>";
         document.body.append(div);
-        setTimeout(() => div.remove(), 1000);
+        setTimeout(() => {
+        div.innerHTML = "<p>внимание</p>" + "5000₽" + "<p>Курс Платный</p>";
+        div.setAttribute('style', 'color: silver;text-decoration: none;')
+        document.body.append(div);  
+        }, 200);
+        setTimeout(() => div.remove(), 1800);
         }, 2000);
     </script>
 </body>
