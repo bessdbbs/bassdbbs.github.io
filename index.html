@@ -102,6 +102,7 @@ body{
     font-size: 5em;
     text-transform: uppercase;
     text-decoration: line-through;
+    transition: color 1s;
 }
 a{
     font-size: 3em;
@@ -200,15 +201,15 @@ a:hover{
     </div>
     </div>
     <!--span id="message"></span-->
-    <a href="https://oplata.qiwi.com/form?invoiceUid=b3d35ea4-1dfb-490e-9dd0-4456445334a8&successUrl=https%3A%2F%2Ftraining.paveldmitriev.com%2Fp%2Fkopiya-gipno-kouchinga-profi" title="После оплаты вам откроеться ссылка на курс">Оплатить</a><br>
+    <!--a href="https://oplata.qiwi.com/form?invoiceUid=b3d35ea4-1dfb-490e-9dd0-4456445334a8&successUrl=https%3A%2F%2Ftraining.paveldmitriev.com%2Fp%2Fkopiya-gipno-kouchinga-profi" title="После оплаты вам откроеться ссылка на курс">Оплатить</a><br-->
     <script>
         setInterval(() => {
         let div = document.createElement('div');
         div.className = "alert";
-        div.innerHTML = "<p>АНТИ</p>" + /*"200$"*/ + "<p>НОРМА</p>";
+        div.innerHTML = "<p>АНТИ</p>" + /*"200$" +*/ "<p>НОРМА</p>";
         document.body.append(div);
         setTimeout(() => {
-        div.innerHTML = "<p>АНТИ</p>" + /*"5000₽"*/ + "<p>НОРМА</p>";
+        div.innerHTML = "<p>АНТИ</p>" + /*"5000₽" +*/ "<p>НОРМА</p>";
         div.setAttribute('style', 'color: silver;text-decoration: none;')
         document.body.append(div);  
         }, 200);
