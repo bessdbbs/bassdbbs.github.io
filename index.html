@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <title>👽</title>
-    <link rel="shortcut icon" href="Polish_20221125_101253411.png">
+    <link rel="shortcut icon" href="14.png">
     <style>
 body{
     padding-top: 5%;
@@ -101,7 +101,6 @@ body{
     color: gold;
     font-size: 5em;
     text-transform: uppercase;
-    text-decoration: line-through;
     transition: color .5s;
 }
 a{
@@ -202,8 +201,7 @@ a:hover{
     </div>
     <script>
     let s = "АНТИ НОРМА",
-            i = 0, div = document.createElement('div'),
-            c = 0;
+            i = 0, div = document.createElement('div');
         div.className = 'alert';
         setInterval(() => {
         div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
@@ -222,7 +220,7 @@ a:hover{
         document.body.append(div);
         setTimeout(() => {
         div.innerHTML = "<p>АНТИ</p>" + /*"5000₽" +*/ "<p>НОРМА</p>";
-        div.setAttribute('style', 'color: silver;text-decoration: none;')
+        div.setAttribute('style', 'color: silver;text-decoration:  line-through;')
         document.body.append(div);  
         }, 200);
         setTimeout(() => div.remove(), 1800);
