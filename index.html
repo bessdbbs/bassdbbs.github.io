@@ -103,6 +103,17 @@ body{
     text-transform: uppercase;
     transition: color .5s;
 }
+.alert>span{
+    animation: underline .3s linear infinite;
+}
+@keyframes underline{
+    from{
+        text-decoration: underline;
+    }
+    to{
+        text-decoration: none;
+    }
+}
 a{
     font-size: 3em;
     width: 20%;
